@@ -1,0 +1,10 @@
+{
+  "description": "A digital technology agency website showcasing services, portfolio, team, and client testimonials to help businesses discover tailored digital solutions.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

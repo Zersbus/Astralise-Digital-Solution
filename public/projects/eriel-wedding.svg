@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8eaf5"/><stop offset=".5" stop-color="#eee6fa"/><stop offset="1" stop-color="#e1f7f8"/></linearGradient></defs>
+  <rect width="1200" height="750" rx="36" fill="url(#g)"/>
+  <circle cx="600" cy="310" r="92" fill="none" stroke="#9561c7" stroke-width="3" opacity=".5"/>
+  <path d="M555 310c27-45 63-45 90 0-28 48-63 48-90 0Z" fill="#e783bc" opacity=".75"/>
+  <text x="600" y="455" text-anchor="middle" font-family="Arial,sans-serif" font-size="42" font-weight="700" fill="#292333">Wedding Invitation</text>
+  <text x="600" y="505" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" letter-spacing="5" fill="#796d80">PRIVATE CLIENT PROJECT</text>
+</svg>
