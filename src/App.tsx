@@ -1,4 +1,24 @@
 import { useState } from 'react'
+import logoImage from './assets/images/astralise-logo.png'
+import aboutTeamImage from './assets/images/about-team.jpg'
+import erielSetiawanImage from './assets/images/eriel-setiawan.jpg'
+import musyaffaImage from './assets/images/musyaffa-alif.jpg'
+import serviceWebImage from './assets/images/service-web.jpg'
+import serviceMobileImage from './assets/images/service-mobile.jpg'
+import serviceBrandingImage from './assets/images/service-branding.jpg'
+import serviceDataImage from './assets/images/service-data.jpg'
+import serviceSupportImage from './assets/images/service-support.jpg'
+import personalPortfolioImage from './assets/images/projects/personal-portfolio.png'
+import caredeskImage from './assets/images/projects/caredesk.png'
+import quikpassaImage from './assets/images/projects/quikpassa.png'
+import peruriImage from './assets/images/projects/peruri.png'
+import jakartaIspuImage from './assets/images/projects/eriel-jakarta-ispu.png'
+import erielWtaImage from './assets/images/projects/eriel-wta.png'
+import erielHajjImage from './assets/images/projects/eriel-hajj.png'
+import erielSalaImage from './assets/images/projects/eriel-sala-x.png'
+import erielRfmImage from './assets/images/projects/eriel-rfm.png'
+import erielZomatoImage from './assets/images/projects/eriel-zomato.jpg'
+import erielWeddingImage from './assets/images/projects/eriel-wedding.svg'
 
 const Arrow = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -27,8 +47,7 @@ const services: Service[] = [
     titleEn: 'Websites & Internal Systems',
     text: 'Website, dashboard, dan sistem operasional yang terintegrasi dengan kebutuhan bisnis.',
     textEn: 'Websites, dashboards, and operational systems integrated around your business needs.',
-    image:
-      'https://images.unsplash.com/photo-1547658719-da2b51169166?fit=crop&w=900&q=85',
+    image: serviceWebImage,
     scope: 'WEB DEVELOPMENT · INTERNAL SYSTEMS · INTEGRATION',
     situations: ['Proses kerja masih tersebar di banyak tools', 'Data operasional sulit dipantau dalam satu tempat', 'Tim membutuhkan sistem yang sesuai alur kerja nyata'],
     situationsEn: ['Workflows are scattered across too many tools', 'Operational data is difficult to monitor in one place', 'Your team needs a system built around its real workflow'],
@@ -41,8 +60,7 @@ const services: Service[] = [
     titleEn: 'Mobile Development',
     text: 'Aplikasi mobile yang cepat, stabil, dan menyenangkan untuk digunakan.',
     textEn: 'Fast, stable, and enjoyable mobile applications built for everyday use.',
-    image:
-      'https://images.unsplash.com/photo-1551650975-87deedd944c3?fit=crop&w=900&q=85',
+    image: serviceMobileImage,
     scope: 'MOBILE APPS · PRODUCT DESIGN · DEVELOPMENT',
     situations: ['Pelanggan membutuhkan akses layanan dari perangkat mobile', 'Proses manual ingin dipindahkan ke aplikasi yang praktis', 'Produk digital harus tetap cepat dan mudah digunakan'],
     situationsEn: ['Customers need access to your service on mobile', 'Manual processes need to become a practical application', 'The digital product must stay fast and easy to use'],
@@ -55,8 +73,7 @@ const services: Service[] = [
     titleEn: 'Branding & UI/UX',
     text: 'Identitas dan pengalaman digital yang konsisten, intuitif, dan mudah diingat.',
     textEn: 'Consistent, intuitive, and memorable digital identities and experiences.',
-    image:
-      'https://images.unsplash.com/photo-1558655146-364adaf1fcc9?fit=crop&w=900&q=85',
+    image: serviceBrandingImage,
     scope: 'BRAND STRATEGY · UI/UX · DESIGN SYSTEM',
     situations: ['Identitas brand belum konsisten di setiap kanal', 'Produk terasa rumit atau tidak intuitif bagi pengguna', 'Tim membutuhkan fondasi desain yang mudah dikembangkan'],
     situationsEn: ['Your brand identity is inconsistent across channels', 'The product feels complicated or unintuitive to users', 'Your team needs a scalable design foundation'],
@@ -72,7 +89,7 @@ const additionalServices: Service[] = [
     titleEn: 'Dashboards & Data',
     text: 'Business analysis, pemetaan kebutuhan, visualisasi data, dan dashboard interaktif untuk membantu keputusan bisnis yang lebih cepat dan terukur.',
     textEn: 'Business analysis, requirements mapping, data visualization, and interactive dashboards for faster, measurable decisions.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?fit=crop&w=1200&q=85',
+    image: serviceDataImage,
     scope: 'BUSINESS ANALYSIS · DATA VISUALIZATION · REPORTING',
     situations: ['Laporan bulanan masih disusun manual dari banyak sumber', 'Data sensor atau mesin belum pernah dilihat sebagai tren', 'Manajemen ingin memantau beberapa cabang atau proyek sekaligus', 'Tim pemasaran perlu melihat hasil iklan sampai ke konversi'],
     situationsEn: ['Monthly reports are still assembled manually from many sources', 'Sensor or machine data has never been viewed as a trend', 'Management needs to monitor multiple branches or projects', 'Marketing teams need to connect campaign results to conversion'],
@@ -85,7 +102,7 @@ const additionalServices: Service[] = [
     titleEn: 'Maintenance & Support',
     text: 'Monitoring berkala, pembaruan sistem, perbaikan masalah, dan dukungan teknis untuk menjaga aplikasi tetap aman, stabil, dan optimal.',
     textEn: 'Regular monitoring, system updates, issue resolution, and technical support to keep your applications secure, stable, and performing well.',
-    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?fit=crop&w=1200&q=85',
+    image: serviceSupportImage,
     scope: 'MONITORING · MAINTENANCE · TECHNICAL SUPPORT',
     situations: ['Aplikasi sudah berjalan tetapi tidak ada tim untuk merawatnya', 'Bug dan permintaan kecil menumpuk setelah peluncuran', 'Bisnis membutuhkan partner teknis untuk menjaga sistem tetap aman'],
     situationsEn: ['The application is live but there is no team to maintain it', 'Bugs and small requests are piling up after launch', 'Your business needs a technical partner to keep systems secure'],
@@ -100,7 +117,7 @@ const projects = [
   {
     name: 'Personal Portfolio Showcase',
     type: 'NEXT.JS · TYPESCRIPT · SUPABASE',
-    image: '/projects/personal-portfolio.png',
+    image: personalPortfolioImage,
     text: 'Website portfolio personal dengan pengalaman digital modern, tipografi tegas, animasi halus, dan showcase proyek yang dinamis.',
     textEn: 'A personal portfolio website with a modern digital experience, expressive typography, subtle motion, and a dynamic project showcase.',
     link: 'https://portofolio-musyaffa-alif.vercel.app/',
@@ -110,7 +127,7 @@ const projects = [
   {
     name: 'CareDesk — Helpdesk Ticketing',
     type: 'REACT · TAILWIND CSS · RECHARTS',
-    image: '/projects/caredesk.png',
+    image: caredeskImage,
     text: 'Sistem helpdesk dengan tiket real-time, live chat, SLA tracking, knowledge base, dan analytics lengkap.',
     textEn: 'A helpdesk system with real-time tickets, live chat, SLA tracking, a knowledge base, and complete analytics.',
     link: 'https://review-hall-88643949.figma.site',
@@ -120,7 +137,7 @@ const projects = [
   {
     name: 'QuikPassa — Event Platform',
     type: 'REACT · TYPESCRIPT · VITE',
-    image: '/projects/quikpassa.png',
+    image: quikpassaImage,
     text: 'Platform tiket event terintegrasi untuk penyelenggara, petugas gate, dan pembeli dengan validasi QR real-time.',
     textEn: 'An integrated event ticketing platform for organizers, gate staff, and buyers with real-time QR validation.',
     link: 'https://emboss-lead-08282754.figma.site',
@@ -130,7 +147,7 @@ const projects = [
   {
     name: 'Fixed Asset Management — PERURI',
     type: 'LARAVEL · REACT · MYSQL',
-    image: '/projects/peruri.png',
+    image: peruriImage,
     text: 'Sistem pengelolaan siklus hidup aset dengan stock opname QR, penyusutan, pelaporan, dan akses berbasis peran.',
     textEn: 'An asset lifecycle management system with QR stocktaking, depreciation, reporting, and role-based access.',
     link: '#kontak',
@@ -140,7 +157,7 @@ const projects = [
   {
     name: 'Jakarta ISPU Classification',
     type: 'DATA SCIENCE · MACHINE LEARNING',
-    image: '/projects/eriel-jakarta-ispu.png',
+    image: jakartaIspuImage,
     text: 'Analisis data kualitas udara harian Jakarta untuk mengklasifikasikan kategori ISPU dan memahami faktor yang memengaruhi kondisi udara.',
     textEn: 'An analysis of daily Jakarta air-quality data to classify air-quality categories and understand the factors affecting conditions.',
     link: 'https://eriel-portfolio.vercel.app/projects/jakarta-ispu-classification',
@@ -150,7 +167,7 @@ const projects = [
   {
     name: 'WTA Tennis Match Analytics',
     type: 'DATA & BI · POWER BI',
-    image: '/projects/eriel-wta.png',
+    image: erielWtaImage,
     text: 'Eksplorasi dua dekade pertandingan tenis profesional wanita untuk menemukan pola performa pemain dan menyajikannya dalam dashboard interaktif.',
     textEn: 'An exploration of two decades of professional women\'s tennis matches to uncover player performance patterns in an interactive dashboard.',
     link: 'https://eriel-portfolio.vercel.app/projects/wta-tennis-analysis',
@@ -160,7 +177,7 @@ const projects = [
   {
     name: 'Hajj & Umrah Pilgrim Satisfaction',
     type: 'DATA ANALYTICS · MACHINE LEARNING',
-    image: '/projects/eriel-hajj.png',
+    image: erielHajjImage,
     text: 'Analisis faktor-faktor yang berkaitan dengan kepuasan jemaah Haji dan Umrah melalui pendekatan analitik dan machine learning.',
     textEn: 'An analysis of the factors related to Hajj and Umrah pilgrim satisfaction using analytics and machine learning.',
     link: 'https://eriel-portfolio.vercel.app/projects/hajj-pilgrim-satisfaction',
@@ -170,7 +187,7 @@ const projects = [
   {
     name: 'SALA-X Hiking Registration App',
     type: 'UI/UX · WEB / IT',
-    image: '/projects/eriel-sala-x.png',
+    image: erielSalaImage,
     text: 'Konsep aplikasi registrasi pendakian yang memungkinkan pendaki mendaftar jalur gunung secara online dengan alur yang lebih sederhana.',
     textEn: 'A hiking registration concept that lets climbers register for mountain routes online through a simpler flow.',
     link: 'https://eriel-portfolio.vercel.app/projects/sala-x',
@@ -180,7 +197,7 @@ const projects = [
   {
     name: 'RFM Customer Segmentation',
     type: 'DATA & BI · CUSTOMER ANALYTICS',
-    image: '/projects/eriel-rfm.png',
+    image: erielRfmImage,
     text: 'Segmentasi pelanggan berdasarkan recency, frequency, dan monetary value untuk membantu bisnis memahami perbedaan aktivitas serta nilai pelanggan.',
     textEn: 'Customer segmentation based on recency, frequency, and monetary value to help businesses understand customer activity and value.',
     link: 'https://eriel-portfolio.vercel.app/projects/rfm-customer-segmentation',
@@ -190,7 +207,7 @@ const projects = [
   {
     name: 'Zomato Delivery Prediction',
     type: 'MACHINE LEARNING · PREDICTION',
-    image: '/projects/eriel-zomato.jpg',
+    image: erielZomatoImage,
     text: 'Model prediksi waktu pengiriman makanan berdasarkan jarak, rating kurir, dan berbagai detail pesanan lainnya.',
     textEn: 'A food delivery time prediction model based on distance, courier ratings, and other order details.',
     link: 'https://eriel-portfolio.vercel.app/projects/zomato-delivery-prediction',
@@ -200,7 +217,7 @@ const projects = [
   {
     name: 'Wedding Invitation Website',
     type: 'PRIVATE · WEB / IT',
-    image: '/projects/eriel-wedding.svg',
+    image: erielWeddingImage,
     text: 'Website undangan pernikahan untuk membantu tamu melihat detail acara dan melakukan RSVP secara online.',
     textEn: 'A wedding invitation website that helps guests view event details and RSVP online.',
     link: 'https://eriel-portfolio.vercel.app/projects/wedding-invitation',
@@ -210,11 +227,11 @@ const projects = [
 ]
 
 const team = [
-  { name: 'Musyaffa Alif', role: 'Founder & Strategist', image: '/musyaffa-alif.jpg' },
+  { name: 'Musyaffa Alif', role: 'Founder & Strategist', image: musyaffaImage },
   {
     name: 'Eriel Setiawan Dewantoro',
     role: 'Co-Founder & Head of Data Analytics',
-    image: '/eriel-setiawan.jpg',
+    image: erielSetiawanImage,
   },
 ]
 
@@ -336,7 +353,7 @@ export default function App() {
     <main>
       <nav className="nav">
         <a className="brand" href="#home" onClick={closeMenu} aria-label="Astralise Digital Solution">
-          <img src="/astralise-logo.png" alt="" />
+          <img src={logoImage} alt="" />
           <span>
             <b>Astralise</b>
             <small>Digital Solution</small>
@@ -546,7 +563,7 @@ export default function App() {
       <section className="about" id="tentang">
         <div className="about-image">
           <img
-            src="https://images.unsplash.com/photo-1587038787166-becd08a156f7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1200"
+            src={aboutTeamImage}
             alt={isEnglish ? 'Creative team discussing product planning' : 'Tim kreatif berdiskusi dalam sesi perencanaan produk'}
           />
           <div className="about-image-label"><span>✦</span> BUILDING WITH PURPOSE</div>
@@ -733,7 +750,7 @@ export default function App() {
       <footer>
         <div className="footer-top">
           <div className="footer-brand">
-            <a className="brand" href="#home"><img src="/astralise-logo.png" alt="" /><span><b>Astralise</b><small>Digital Solution</small></span></a>
+            <a className="brand" href="#home"><img src={logoImage} alt="" /><span><b>Astralise</b><small>Digital Solution</small></span></a>
             <p>{isEnglish ? <>Designing digital solutions that<br />move businesses forward.</> : <>Merancang solusi digital yang<br />menggerakkan bisnis ke depan.</>}</p>
           </div>
           <div><b>{isEnglish ? 'NAVIGATION' : 'NAVIGASI'}</b><a href="#layanan">{isEnglish ? 'Services' : 'Layanan'}</a><a href="#tentang">{isEnglish ? 'About' : 'Tentang'}</a><a href="#portofolio">{isEnglish ? 'Portfolio' : 'Portofolio'}</a><a href="#tim">{isEnglish ? 'Team' : 'Tim'}</a><a href="#testimoni">{isEnglish ? 'Testimonials' : 'Testimoni'}</a></div>
