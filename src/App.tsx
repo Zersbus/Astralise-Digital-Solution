@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import logoImage from './assets/images/astralise-logo.png'
 import aboutTeamImage from './assets/images/about-team.jpg'
+import adityaPratamaImage from './assets/images/aditya-pratama.png'
 import erielSetiawanImage from './assets/images/eriel-setiawan.jpg'
 import musyaffaImage from './assets/images/musyaffa-alif.jpg'
 import serviceWebImage from './assets/images/service-web.jpg'
@@ -19,6 +20,10 @@ import erielSalaImage from './assets/images/projects/eriel-sala-x.png'
 import erielRfmImage from './assets/images/projects/eriel-rfm.png'
 import erielZomatoImage from './assets/images/projects/eriel-zomato.jpg'
 import erielWeddingImage from './assets/images/projects/eriel-wedding.svg'
+import adityaNusantaraImage from './assets/images/projects/aditya-nusantara-express.jpeg'
+import adityaEverlandImage from './assets/images/projects/aditya-everland.png'
+import adityaElectricityImage from './assets/images/projects/aditya-electricity-payment.png'
+import adityaMbPassImage from './assets/images/projects/aditya-mb-pass.png'
 
 const Arrow = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -224,6 +229,46 @@ const projects = [
     technologies: ['Web Development', 'Responsive Design', 'RSVP Flow'],
     features: ['Event information', 'Online RSVP', 'Responsive experience', 'Private client project'],
   },
+  {
+    name: 'Nusantara Express Logistics System',
+    type: 'REACT · VITE · PHP · MYSQL',
+    image: adityaNusantaraImage,
+    text: 'Aplikasi manajemen logistik full-stack dengan pelacakan pengiriman, pengecekan tarif, dashboard pelanggan, dan operasional admin.',
+    textEn: 'A full-stack logistics management app with shipment tracking, shipping cost checking, a customer dashboard, and admin operations.',
+    link: 'https://github.com/Adityapratama61/Expense-Tracker',
+    technologies: ['React JS', 'Vite', 'Tailwind CSS', 'PHP Native REST API', 'MySQL'],
+    features: ['Shipment tracking', 'Customer dashboard', 'Role-based access', 'Admin operations'],
+  },
+  {
+    name: 'Everland',
+    type: 'REACT · VITE · TAILWIND CSS',
+    image: adityaEverlandImage,
+    text: 'Landing page e-commerce fashion responsif dengan komponen UI yang dapat digunakan kembali dan animasi saat scroll.',
+    textEn: 'A responsive fashion e-commerce landing page with reusable UI components and scroll animations.',
+    link: 'https://github.com/Adityapratama61/everland-e-commerce',
+    technologies: ['React JS', 'Vite', 'Tailwind CSS', 'Intersection Observer API'],
+    features: ['Sticky navbar', 'Mega menu', 'Category grid', 'Product carousel', 'Scroll animations'],
+  },
+  {
+    name: 'Electricity Payment App',
+    type: 'PHP · MYSQL · BOOTSTRAP',
+    image: adityaElectricityImage,
+    text: 'Sistem tagihan listrik pascabayar untuk mengelola pelanggan, pemakaian, tagihan, dan catatan pembayaran.',
+    textEn: 'A postpaid electricity billing system for managing customers, usage, bills, and payment records.',
+    link: 'https://github.com/Adityapratama61/Pascabayar-listrik',
+    technologies: ['PHP', 'MySQL', 'Bootstrap', 'CRUD'],
+    features: ['Customer management', 'Usage records', 'Bill management', 'Payment records', 'Reports'],
+  },
+  {
+    name: 'MB-Pass',
+    type: 'HTML · CSS · JAVASCRIPT',
+    image: adityaMbPassImage,
+    text: 'Konsep website perizinan pendakian gunung dengan landing page yang bersih, responsif, dan hierarki visual yang jelas.',
+    textEn: 'A mountain hiking permit website concept with a clean, responsive landing page and clear visual hierarchy.',
+    link: 'https://github.com/Adityapratama61/MB-Pass',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+    features: ['Hiking permit concept', 'Responsive layout', 'Clear visual hierarchy', 'Mobile-friendly experience'],
+  },
 ]
 
 const team = [
@@ -232,6 +277,11 @@ const team = [
     name: 'Eriel Setiawan Dewantoro',
     role: 'Co-Founder & Head of Data Analytics',
     image: erielSetiawanImage,
+  },
+  {
+    name: 'Aditya Pratama',
+    role: 'Co-Founder & Lead Developer',
+    image: adityaPratamaImage,
   },
 ]
 
@@ -259,8 +309,8 @@ const testimonials = [
       'Alur pengelolaan aset menjadi jauh lebih rapi dan mudah dipantau. Fitur QR dan pelaporan membantu pekerjaan operasional berjalan lebih efisien.',
     quoteEn:
       'Asset management became much more organized and easier to monitor. The QR and reporting features make our operations more efficient.',
-    initials: 'AP',
-    name: 'Aditya Pratama',
+    initials: 'RM',
+    name: 'Rizky Maulana',
     role: 'IT Asset Officer, PERURI',
   },
   {
@@ -345,6 +395,10 @@ export default function App() {
     projects[7],
     projects[9],
     projects[10],
+    projects[11],
+    projects[12],
+    projects[13],
+    projects[14],
   ]
 
   const closeMenu = () => setMenuOpen(false)
