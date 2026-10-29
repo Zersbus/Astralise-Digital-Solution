@@ -390,6 +390,7 @@ footer { margin: 0; padding: 70px 7vw 25px; background: #fff; border-top: 1px so
   .feature-card ul { grid-template-columns: 1fr; }
   .team-grid { gap: 12px; }
   .portrait { height: 270px; }
+  .portrait img { object-fit: contain; object-position: center bottom; }
   .why-grid { gap: 14px; }
   .why-us { margin: 0; padding: 70px 6vw; }
   .testimonial { padding: 80px 6vw; }
